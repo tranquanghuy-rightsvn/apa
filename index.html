@@ -129,6 +129,7 @@
         .hero {
             position: relative;
             min-height: 100vh;
+            min-height: 100svh;
             display: flex;
             flex-direction: column;
             color: var(--white);
@@ -143,9 +144,16 @@
             background-image: url("images/hero-bg.jpg");
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             opacity: 0.6;
             pointer-events: none;
+        }
+
+        /* background-attachment: fixed gay giat khi cuon tren mobile,
+           chi bat parallax cho thiet bi co chuot that */
+        @media (hover: hover) and (pointer: fine) {
+            .hero::before {
+                background-attachment: fixed;
+            }
         }
 
         /* Lop phu toi nhe de chu de doc */
